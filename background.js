@@ -5,7 +5,8 @@
 
 chrome.alarms.onAlarm.addListener(function() {
   chrome.storage.sync.get(['zip'], function(item) {
-    fetchTiming(item);
+    console.log(item.zip);
+    fetchTiming(item.zip);
   });
 });
 chrome.notifications.onClicked.addListener(function(){
@@ -29,7 +30,6 @@ function fetchTiming(zip){
 function createNotificationV2(response){
   console.log(response);
   if(response){
-    chrome.browserAction.setBadgeText({text: ''});
     //create notification
     notify();
   } else {
