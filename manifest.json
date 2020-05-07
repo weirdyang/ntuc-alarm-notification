@@ -1,0 +1,21 @@
+{
+  "name": "NTUC slots checker",
+  "description": "Checks for delivery slots available based on time interval chosen",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": ["alarms", "notifications", "storage", "tabs"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "NTUC slots checker",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icons8-box-16.png",
+    "32": "icons8-box-32.png",
+    "48": "icons8-box-48.png",
+    "128": "icons8-box-64.png"
+  }
+}
