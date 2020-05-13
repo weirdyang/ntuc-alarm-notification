@@ -14,5 +14,5 @@ Icons are from [icons8](https://icons8.com/).
   
 # Update
 
-Seems like the api is returning true even when no slots are available.
+~~Seems like the api is returning true even when no slots are available.~~ Hopefully this is fixed.
 
