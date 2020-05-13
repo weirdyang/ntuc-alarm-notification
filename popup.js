@@ -3,20 +3,17 @@
 // found in the LICENSE file.
 'use strict';
 const postalCode = document.getElementById('postal');
-const addressField = document.getElementById('address');
+
 function setAlarm(event) {
   let minutes = parseFloat(event.target.value);
   let zip = postalCode.value 
   ? postalCode.value
   : 238823;
-  let address = addressField.value
-  ? addressField.value
-  : '35 Orchard Rd';
   chrome.browserAction.setBadgeText({text: 'ON'});
   chrome.alarms.create({delayInMinutes: minutes});
   chrome.storage.sync.set({minutes: minutes});
   chrome.storage.sync.set({zip: zip});
-  chrome.storage.sync.set({address: address});
+
   window.close();
 }
 
