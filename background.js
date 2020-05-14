@@ -20,7 +20,7 @@ chrome.notifications.onButtonClicked.addListener(function() {
 });
 
 function fetchTiming(zip){
-      fetch(`https://website-api.omni.fairprice.com.sg/api/slot-availability?address[pincode]=${zip}&storeId=165`)
+      fetch(`https://website-api.omni.fairprice.com.sg/api/slot-availability?address[pincode]=${zip}&storeId=165`, {cache: "no-store"})
       .then(res => res.json())
       .then(res => {
       createNotificationV2(res.data.available);
